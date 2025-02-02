@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from PIL import Image
 
 # Read data
-df = pd.read_csv('raw.csv')
+df = pd.read_csv('../data/raw.csv')
 # print(df)
 
 GRAY_COLOR = '#E6E6E6'
@@ -321,7 +321,7 @@ fig.add_annotation(
 )
 
 # Export the plot
-fig.write_image("voluntary_commitments_scores.pdf", scale=2/1)
+fig.write_image("../visualizations/voluntary_commitments_scores.pdf", scale=2/1)
 
 # Export data to CSV
-df[df.Type == 'Total'].reset_index()[['Model', 'Score']].to_csv('voluntary_commitments_scores.csv', index=False)
+df[df.Type == 'Total'].reset_index()[['Model', 'Score']].to_csv('../visualizations/voluntary_commitments_scores.csv', index=False)

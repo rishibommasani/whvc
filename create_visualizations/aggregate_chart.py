@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 colors = ['#DAD7CD', '#A3B18A', '#588157', '#3A5A40', '#344E41']
 custom_colorscale = [[i/(len(colors)-1), color] for i, color in enumerate(colors)]
 
-df = pd.read_csv('aggregate.csv', index_col=0)
+df = pd.read_csv('../data/aggregate.csv', index_col=0)
 df.drop(columns=['Average'], inplace=True)
 df = df * 100
 
